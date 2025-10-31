@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منوی کافه سایان</title>
+<style>
+body {
+  font-family: Tahoma, sans-serif;
+  background-color: #4b3f34;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #2f4f4f;
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #3c2f2f;
+}
+.tab {
+  padding: 15px 25px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+}
+.tab.active {
+  border-bottom: 3px solid #f0f0f0;
+}
+.tab-content {
+  display: none;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.tab-content.active {
+  display: block;
+}
+.menu-item {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #5a4a3d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.menu-item img {
+  width: 150px;
+  object-fit: cover;
+}
+.menu-item-details {
+  padding: 10px 15px;
+  flex: 1;
+}
+.menu-item-details h3 {
+  margin: 0 0 5px 0;
+}
+.menu-item-details p {
+  margin: 0 0 5px 0;
+}
+.menu-item-details span {
+  font-weight: bold;
+  color: #ffd700;
+}
+@media (max-width:600px){
+  .menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+<header>منوی کافه سایان</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('espresso')">اسپرسو بار</div>
+  <div class="tab" onclick="showTab('cold')">نوشیدنی سرد</div>
+  <div class="tab" onclick="showTab('hot')">بار گرم</div>
+  <div class="tab" onclick="showTab('cake')">کیک</div>
+</div>
+
+<!-- اسپرسو بار -->
+<div id="espresso" class="tab-content active">
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1601924928311-1f61d5d6c85d" alt="لاته">
+    <div class="menu-item-details">
+      <h3>لاته</h3>
+      <p>اسپرسو دبل + شیر بخار داده شده</p>
+      <span>۹۰,۰۰۰ تومان</span>
+    </div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1566843971049-5b5b8f407c4d" alt="کاپوچینو">
+    <div class="menu-item-details">
+      <h3>کاپوچینو</h3>
+      <p>اسپرسو + شیر بخار داده شده + فوم</p>
+      <span>۸۵,۰۰۰ تومان</span>
+    </div>
+  </div>
+</div>
+
+<!-- نوشیدنی سرد -->
+<div id="cold" class="tab-content">
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1585196606354-92c2ebd93c0a" alt="آیس لاته">
+    <div class="menu-item-details">
+      <h3>آیس لاته</h3>
+      <p>اسپرسو + شیر سرد + یخ</p>
+      <span>۹۵,۰۰۰ تومان</span>
+    </div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1582719478170-1f6a242b6c48" alt="موکا یخ">
+    <div class="menu-item-details">
+      <h3>موکا یخ</h3>
+      <p>اسپرسو + شکلات + شیر + یخ</p>
+      <span>۱۱۰,۰۰۰ تومان</span>
+    </div>
+  </div>
+</div>
+
+<!-- بار گرم -->
+<div id="hot" class="tab-content">
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1566843971049-5b5b8f407c4d" alt="چای ماسالا">
+    <div class="menu-item-details">
+      <h3>چای ماسالا</h3>
+      <p>چای سیاه + ادویه‌های هندی + شیر</p>
+      <span>۷۰,۰۰۰ تومان</span>
+    </div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1601924928311-1f61d5d6c85d" alt="هات چاکلت">
+    <div class="menu-item-details">
+      <h3>هات چاکلت</h3>
+      <p>شکلات داغ + شیر + خامه</p>
+      <span>۸۵,۰۰۰ تومان</span>
+    </div>
+  </div>
+</div>
+
+<!-- کیک -->
+<div id="cake" class="tab-content">
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1606755962771-1ec0f1ee0c7b" alt="چیزکیک">
+    <div class="menu-item-details">
+      <h3>چیزکیک</h3>
+      <p>پای پنیری نرم با بیسکوییت کراست</p>
+      <span>۱۰۰,۰۰۰ تومان</span>
+    </div>
+  </div>
+  <div class="menu-item">
+    <img src="https://images.unsplash.com/photo-1599785209707-0cf6c7c22e0b" alt="براونی">
+    <div class="menu-item-details">
+      <h3>براونی</h3>
+      <p>براونی شکلاتی نرم با مغز گردو</p>
+      <span>۹۰,۰۰۰ تومان</span>
+    </div>
+  </div>
+</div>
+
+<script>
+function showTab(tabId){
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.querySelector('[onclick="showTab(\''+tabId+'\')"]').classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+</script>
+</body>
+</html>
